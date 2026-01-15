@@ -25,10 +25,11 @@ _SINGLE_COL_MESSAGE = (
     "To apply to selected columns:"
     " ``ApplyToCols({class_name}(), cols=['col_name_1', 'col_name_2'])``"
 )
-_SINGLE_COL_PARAGRAPH = textwrap.fill(
-    _SINGLE_COL_MESSAGE, initial_indent="    ", subsequent_indent="    "
+_SINGLE_COL_FORMATTED = "\n\n".join(
+    textwrap.fill(line, initial_indent=" " * 4, subsequent_indent=" " * 4)
+    for line in _SINGLE_COL_MESSAGE.splitlines()
 )
-_SINGLE_COL_NOTE = f".. note::\n\n{_SINGLE_COL_PARAGRAPH}\n"
+_SINGLE_COL_NOTE = f".. note::\n\n{_SINGLE_COL_FORMATTED}\n"
 
 
 class RejectColumn(ValueError):
