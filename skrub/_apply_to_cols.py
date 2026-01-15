@@ -20,10 +20,10 @@ _SINGLE_COL_MESSAGE = (
     " this transformer to one or more columns in a dataframe, use it as a parameter in"
     " a :class:`skrub.ApplyToCols` or a :class:`skrub.TableVectorizer`."
     "\n\n"
-    "To apply to all columns: ApplyToCols({class_name}())"
+    "To apply to all columns: ``ApplyToCols({class_name}())``"
     "\n\n"
     "To apply to selected columns:"
-    " ApplyToCols({class_name}(), cols=['col_name_1', 'col_name_2'])"
+    " ``ApplyToCols({class_name}(), cols=['col_name_1', 'col_name_2'])``"
 )
 _SINGLE_COL_PARAGRAPH = textwrap.fill(
     _SINGLE_COL_MESSAGE, initial_indent="    ", subsequent_indent="    "
