@@ -18,7 +18,7 @@ _SINGLE_COL_LINE = (
     " estimators, its ``fit``, ``transform`` and ``fit_transform`` methods expect a"
     " single column (a pandas or polars Series) rather than a full dataframe. To apply"
     " this transformer to one or more columns in a dataframe, use it as a parameter in"
-    " a ``skrub.ApplyToCols`` or a ``skrub.TableVectorizer``."
+    " a :class:`skrub.ApplyToCols` or a :class:`skrub.TableVectorizer`."
     " To apply to all columns::\n\n"
     "   ApplyToCols({class_name}())\n\n"
     "To apply to selected columns::\n\n"
