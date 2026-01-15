@@ -31,7 +31,7 @@ class GapEncoder(TransformerMixin, SingleColumnTransformer):
     capturing combinations of substrings that frequently co-occur.
 
     The GapEncoder supports online learning on batches of
-    data for scalability through the GapEncoder.partial_fit
+    data for scalability through the :meth:`GapEncoder.partial_fit`
     method.
 
     The principle is as follows:
