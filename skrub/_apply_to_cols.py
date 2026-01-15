@@ -13,19 +13,20 @@ from ._join_utils import pick_column_names
 
 __all__ = ["ApplyToCols", "SingleColumnTransformer", "RejectColumn"]
 
-_SINGLE_COL_LINE = (
+_SINGLE_COL_MESSAGE = (
     "``{class_name}`` is a type of single-column transformer. Unlike most scikit-learn"
     " estimators, its ``fit``, ``transform`` and ``fit_transform`` methods expect a"
     " single column (a pandas or polars Series) rather than a full dataframe. To apply"
     " this transformer to one or more columns in a dataframe, use it as a parameter in"
     " a :class:`skrub.ApplyToCols` or a :class:`skrub.TableVectorizer`."
-    " To apply to all columns::\n\n"
-    "   ApplyToCols({class_name}())\n\n"
-    "To apply to selected columns::\n\n"
-    "   ApplyToCols({class_name}(), cols=['col_name_1', 'col_name_2'])"
+    "\n\n"
+    "To apply to all columns: ApplyToCols({class_name}())"
+    "\n\n"
+    "To apply to selected columns:"
+    " ApplyToCols({class_name}(), cols=['col_name_1', 'col_name_2'])"
 )
 _SINGLE_COL_PARAGRAPH = textwrap.fill(
-    _SINGLE_COL_LINE, initial_indent="    ", subsequent_indent="    "
+    _SINGLE_COL_MESSAGE, initial_indent="    ", subsequent_indent="    "
 )
 _SINGLE_COL_NOTE = f".. note::\n\n{_SINGLE_COL_PARAGRAPH}\n"
 
